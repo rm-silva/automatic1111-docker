@@ -15,11 +15,6 @@ services:
       if [ ! -d /stablediff-web/.git ]; then
         cp -a /sdtemp/. /stablediff-web/
       fi;
-      if [ ! -f /stablediff-web/models/Stable-diffusion/*.ckpt ]; then
-        echo 'Please copy stable diffusion model to stablediff-models directory'
-        echo 'You may need sudo to perform this action'
-        exit 1
-      fi;
       python launch.py"
     ports:
       - "7860:7860"
